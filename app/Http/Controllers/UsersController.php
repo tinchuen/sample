@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function create(){
+    public function create(Request $request){
+        trigger_error($request->url());
         return view('users.create');
     }
 }
